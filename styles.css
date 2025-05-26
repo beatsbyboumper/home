@@ -1,54 +1,76 @@
+/* Reset general */
 body {
   margin: 0;
   background-color: #000;
-  color: #0ff;
+  color: rgb(255, 0, 0);
   font-family: 'Courier New', monospace;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+   background: url('superback.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: #000; /* Fallback */
+  padding: 2em;
+
+}
+
+/* Hero section con animación */
+.hero-section {
+  display: flex;
   justify-content: center;
+  align-items: center;
   height: 100vh;
-  overflow: hidden;
+  text-align: center;
+  background-color: #000;
+  padding: 2em;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background: url('superback.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: #000; /* Fallback */
+  padding: 2em;
+
+
 }
 
-h1 {
+
+
+h1.glitch {
   font-size: 4rem;
-  text-align: center;
-  margin: 0.5em;
-  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
-  animation: glitch 1s infinite;
+  margin-bottom: 0.5em;
+  text-shadow: 0 0 10px rgb(255, 0, 0), 0 0 20px rgb(255, 0, 0);
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: fadeInUp 1.2s ease-out forwards;
 }
 
-p {
-  font-size: 1.8rem;
-  text-align: center;
-  margin: 0.5em;
-  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-@keyframes glitch {
-  0% { transform: translate(0); }
-  20% { transform: translate(-2px, 2px); }
-  40% { transform: translate(2px, -2px); }
-  60% { transform: translate(-1px, 1px); }
-  80% { transform: translate(1px, -1px); }
-  100% { transform: translate(0); }
-}
-
-.terminal-box {
-  background: rgba(0, 255, 255, 0.1);
-  border: 2px solid #0ff;
-  padding: 2em 3em;
-  border-radius: 20px;
-  box-shadow: 0 0 30px #0ff5;
-  max-width: 90%;
+#typewriter {
+  font-size: 1.5rem;
+  margin-bottom: 1.5em;
+  text-shadow: 0 0 5px rgb(255, 0, 0);
 }
 
 .cursor {
   display: inline-block;
   width: 12px;
   height: 28px;
-  background: #0ff;
+  background: rgb(255, 0, 0);
   animation: blink 0.7s infinite;
   margin-left: 8px;
 }
@@ -59,40 +81,104 @@ p {
 }
 
 .catalogo-botones {
-  margin-top: 2em;
   display: flex;
-  gap: 1.5em;
   flex-wrap: wrap;
+  gap: 1em;
   justify-content: center;
 }
 
 .btn {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   padding: 0.75em 1.5em;
   border-radius: 10px;
   background-color: transparent;
-  border: 2px solid #0ff;
-  color: #0ff;
-  font-family: 'Courier New', monospace;
+  border: 2px solid rgb(255, 0, 0);
+  color: rgb(255, 0, 0);
+  font-family: inherit;
   cursor: pointer;
   transition: all 0.3s;
-  text-shadow: 0 0 5px #0ff;
+  text-shadow: 0 0 4px rgb(255, 0, 0);
 }
 
 .btn:hover {
-  background-color: #0ff;
+  background-color: rgb(255, 0, 0);
   color: #000;
-  text-shadow: none;
 }
 
+/* Botón de mute */
 .mute-btn {
-  position: absolute;
+  position: fixed;
   top: 1em;
   right: 1em;
   font-size: 1.5rem;
   background: none;
-  color: #0ff;
+  color: rgb(255, 0, 0);
   border: none;
   cursor: pointer;
-  text-shadow: 0 0 5px #0ff;
+  z-index: 10;
+  text-shadow: 0 0 5px rgb(255, 0, 13);
 }
+
+/* Secciones secundarias */
+section {
+  padding: 4em 2em;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.info-section h2,
+.galeria-section h2 {
+  font-size: 2.3rem;
+  color: rgb(255, 0, 0);
+  text-shadow: 0 0 5px rgb(255, 0, 0);
+  margin-bottom: 0.5em;
+}
+
+.info-section p {
+  font-size: 1.3rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: rgb(255, 0, 38);
+  text-shadow: 0 0 3px rgb(255, 0, 25);
+}
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+  margin-top: 2em;
+}
+
+.galeria img {
+  width: 250px;
+  border: 2px solid rgb(255, 0, 0);
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.267);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+}
+.scroll-down-indicator {
+  position: absolute;
+  bottom: 2em;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: fadeIn 2s ease-in-out 2s forwards;
+  opacity: 0;
+  z-index: 5;
+}
+
+.scroll-down-indicator .arrow {
+  font-size: 2.5rem;
+  color: rgb(255, 0, 0);
+  text-shadow: 0 0 5px rgb(255, 0, 0);
+  animation: bounce 1.5s infinite;
+  display: inline-block;
+}
+
