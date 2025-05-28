@@ -1,24 +1,20 @@
-/* Reset general */
 body {
-  display: flex
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0;
   background-color: #000;
   color: #fff;
   font-family: 'Courier New', monospace;
-  flex-direction: column;
-  align-items: center;
   overflow-x: hidden;
   overflow-y: auto;
   scroll-behavior: smooth;
   background: url('superback.jpg') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
-  background-color: #000; /* Fallback */
   padding: 4em;
-
 }
 
-/* Hero section con animación */
 .hero-section {
   display: flex;
   justify-content: center;
@@ -29,13 +25,8 @@ body {
   background: url('superback.jpg') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
-  background-color: #000; /* Fallback */
   padding: 4em;
-
-
 }
-
-
 
 h1.glitch {
   font-size: 6rem;
@@ -98,7 +89,6 @@ h1.glitch {
   color: #000;
 }
 
-/* Botón de mute */
 .mute-btn {
   position: fixed;
   top: 1em;
@@ -112,7 +102,6 @@ h1.glitch {
   text-shadow: 0 0 5px #fff;
 }
 
-/* Secciones secundarias */
 section {
   padding: 4em 2em;
   max-width: 1000px;
@@ -157,6 +146,7 @@ section {
   transform: scale(1.05);
   box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
 }
+
 .scroll-down-indicator {
   position: absolute;
   bottom: 2em;
@@ -175,7 +165,6 @@ section {
   display: inline-block;
 }
 
-
 html {
   font-size: 16px;
 }
@@ -183,6 +172,10 @@ html {
 @media (max-width: 768px) {
   html {
     font-size: 14px;
+  }
+
+  body {
+    padding: 1em;
   }
 
   .info-section h2,
@@ -198,8 +191,21 @@ html {
     font-size: 3rem;
   }
 
+  #typewriter {
+    font-size: 1.5rem;
+  }
+
   .btn {
     font-size: 1.2rem;
+    padding: 0.5em 1em;
+  }
+
+  .galeria img {
+    width: 150px;
+  }
+
+  section {
+    padding: 2em 1em;
   }
 }
 
