@@ -248,3 +248,42 @@ footer{
   justify: center;
   align-items: center;
 }
+/* ✨ Animación inicial por scroll */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ✨ Brillo pulsante en títulos */
+.pulse-glow {
+  animation: pulseGlow 2s infinite alternate;
+}
+
+@keyframes pulseGlow {
+  0% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #e02b2b;
+  }
+  100% {
+    text-shadow: 0 0 20px #fff, 0 0 40px #e02b2b;
+  }
+}
+
+/* 🔘 Hover animado en botones */
+.btn:hover {
+  background-color: #fff;
+  color: #000;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #fff;
+}
+
+/* 🖼️ Hover pro en galería */
+.galeria img:hover {
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+}
