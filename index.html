@@ -2,64 +2,73 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Boumper X</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <audio id="bgAudio" src="glitchtrap.mp3" loop></audio>
   <button onclick="toggleAudio()" class="mute-btn">🔊</button>
-  
 
   <section class="hero-section">
     <div class="terminal-box">
       <h1 class="glitch">Boumper X</h1>
-      
       <div class="catalogo-botones">
         <button onclick="window.location.href='https://beatsbyboumper.github.io/trapbeats/'" class="btn">Catálogo Trap</button>
         <button onclick="window.location.href='https://beatsbyboumper.github.io/beatstechno/'" class="btn">Catálogo Tech</button>
       </div>
     </div>
- </div>
-<div class="scroll-down-indicator">
-    <span class="arrow">↓</span>
-  </div>
-</section>
-
+    <div class="scroll-down-indicator">
+      <span class="arrow">↓</span>
+    </div>
+  </section>
 
   <section class="info-section">
     <h2>¿Quién es Boumper X?</h2>
-    <p>Soy productor musical, beatmaker y DJ. Mis catálogos de beats fusionan el trap y la electrónica en busqueda de experiencias epicas X_X.</p>
+    <p>Soy productor musical, beatmaker y DJ. Mis catálogos de beats fusionan el trap y la electrónica en búsqueda de experiencias épicas X_X.</p>
   </section>
 
   <section class="galeria-section">
     <h2>Colaboraciones</h2>
     <div class="galeria">
-     <a href="https://www.youtube.com/watch?v=1k0-NiGAREk">
-  <img src="queria.jpg" alt="QUERIA PRENDERLO FT. Jota Underground">
-</a>
-         <a href="https://www.youtube.com/watch?v=ubhFs-cOtoI">
-  <img src="Sueños.jpeg" alt="Sueños FT. Buho & Jota Underground">
-</a>
-     <a href="https://soundcloud.com/user-159729587/sin-miedo-freestyle-buho-x?si=fdae710f3bbf4796b1211519d5857278&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing">
-  <img src="sin miedo.jpeg" alt="Sin miedo ft Khea Buho Feli">
-</a>
-      <!-- Agregá más imágenes según necesites -->
+      <a href="https://www.youtube.com/watch?v=1k0-NiGAREk">
+        <img src="queria.jpg" alt="QUERIA PRENDERLO FT. Jota Underground">
+      </a>
+      <a href="https://www.youtube.com/watch?v=ubhFs-cOtoI">
+        <img src="Sueños.jpeg" alt="Sueños FT. Buho & Jota Underground">
+      </a>
+      <a href="https://soundcloud.com/user-159729587/sin-miedo-freestyle-buho-x">
+        <img src="sin miedo.jpeg" alt="Sin miedo ft Khea Buho Feli">
+      </a>
     </div>
+
     <h2>Proyectos</h2>
-     <div class="galeria">
-     <a href="https://www.youtube.com/watch?v=hN6YQWqrzZ4">
-  <img src="modo zenn.jpg" alt="Modo zen">
-</a>
-         <a href="https://www.youtube.com/watch?v=3JfhbENiTBA">
-  <img src="wacho.jpeg" alt="Wacho">
-</a>
-     <a href="https://www.youtube.com/watch?v=9u9TWor6lBc">
-  <img src="ubicacion.jpeg" alt="Ubicacion">
-</a>
+    <div class="galeria">
+      <a href="https://www.youtube.com/watch?v=hN6YQWqrzZ4">
+        <img src="modo zenn.jpg" alt="Modo zen">
+      </a>
+      <a href="https://www.youtube.com/watch?v=3JfhbENiTBA">
+        <img src="wacho.jpeg" alt="Wacho">
+      </a>
+      <a href="https://www.youtube.com/watch?v=9u9TWor6lBc">
+        <img src="ubicacion.jpeg" alt="Ubicación">
+      </a>
+    </div>
   </section>
- <footer class="footer">
-        <p>© 2024 Boumper X. Todos los derechos reservados.</p>
-    </footer>
-  <script src="script.js"></script>
+
+  <footer class="footer">
+    <p>© 2024 Boumper X. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    function toggleAudio() {
+      const audio = document.getElementById("bgAudio");
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    }
+  </script>
 </body>
 </html>
