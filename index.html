@@ -60,15 +60,35 @@
     <p>© 2024 Boumper X. Todos los derechos reservados.</p>
   </footer>
 
-  <script>
-    function toggleAudio() {
-      const audio = document.getElementById("bgAudio");
-      if (audio.paused) {
-        audio.play();
-      } else {
-        audio.pause();
-      }
+<script>
+  function toggleAudio() {
+    const audio = document.getElementById("bgAudio");
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
     }
-  </script>
+  }
+
+  // 🧠 Animación al hacer scroll
+  const faders = document.querySelectorAll('.fade-in-section');
+
+  const appearOptions = {
+    threshold: 0.2,
+    rootMargin: "0px 0px -50px 0px"
+  };
+
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("visible");
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+
+  faders.forEach(section => {
+    appearOnScroll.observe(section);
+  });
+</script>
 </body>
 </html>
