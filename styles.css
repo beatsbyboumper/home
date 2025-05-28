@@ -1,16 +1,16 @@
 /* Reset general */
 body {
+  display: flex
   margin: 0;
   background-color: #000;
   color: #fff;
   font-family: 'Courier New', monospace;
-  display: flex;
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
   overflow-y: auto;
   scroll-behavior: smooth;
-   background: url('superback.jpg') no-repeat center center;
+  background: url('superback.jpg') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   background-color: #000; /* Fallback */
